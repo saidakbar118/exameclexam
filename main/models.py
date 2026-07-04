@@ -20,3 +20,6 @@ class Certificate(models.Model):
     class Meta:
         verbose_name = "Sertifikat"
         verbose_name_plural = "Sertifikatlar"
+        
+class certificate12(models.Model):
+    rasm = models.FileField(upload_to='media/')

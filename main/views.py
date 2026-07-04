@@ -1,9 +1,14 @@
 # views.py - Variant 1: certificate_number bo'yicha
 from django.shortcuts import render, get_object_or_404
-from .models import Certificate
+from .models import Certificate,certificate12
 
-def certificate_detail(request, certificate_number):
-    """Sertifikatni raqami bo'yicha ko'rsatish"""
-    certificate = get_object_or_404(Certificate, certificate_number=certificate_number)
-    return render(request, 'text.html', {'certificate': certificate})
+# def certificate_detail(request, certificate_number):
+#     """Sertifikatni raqami bo'yicha ko'rsatish"""
+#     certificate = get_object_or_404(Certificate, certificate_number=certificate_number)
+#     return render(request, 'certificate_detail.html', {'certificate': certificate})
 
+def text_view(request):
+    return render(request, 'text.html')
+
+def text2_view(request):
+    return render(request, 'text2.html')
